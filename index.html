@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d43">
+  <meta name="description" content="適合香港高中生物課堂的反射弧互動模擬：退縮反射、膝躍反射、隨意動作及神經路徑受損實驗。可離線使用。">
+  <title>反射弧實驗室 · Reflex Arc Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#experiment">跳至實驗</a>
+<header class="site-header">
+  <div class="brand"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 24 15 16 8 7M15 16l10-9M15 16l10 10"/><circle cx="15" cy="16" r="4"/><circle cx="8" cy="7" r="2"/><circle cx="25" cy="7" r="2"/><circle cx="25" cy="26" r="2"/><circle cx="7" cy="24" r="2"/></svg></span><div><h1>反射弧實驗室</h1><span>REFLEX ARC LAB <i>／</i> 高中生物</span></div></div>
+  <div class="header-actions"><span class="offline-badge"><span></span>可離線使用</span><button id="present-button" class="quiet-button" aria-pressed="false">⛶ <span>投影模式</span></button><button id="guide-button" class="quiet-button">教學指南 <span aria-hidden="true">↗</span></button></div>
+</header>
+<main id="experiment">
+  <div class="intro-row"><div><p class="eyebrow">F5 BIOLOGY <span>／</span> NERVOUS COORDINATION</p><h2>一個刺激，兩條不同的路徑。</h2><p class="intro-copy">追蹤神經脈衝，分辨反射、感覺與隨意動作。</p></div><div class="lesson-sequence" aria-label="探究流程"><span><b>01</b> 預測</span><i>→</i><span><b>02</b> 觀察</span><i>→</i><span><b>03</b> 解釋</span></div></div>
+  <nav class="scenario-tabs" aria-label="選擇實驗情境">
+    <button class="scenario-tab active" data-mode="withdrawal" aria-pressed="true"><span class="tab-number">01</span><span>退縮反射<small>Withdrawal reflex</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+    <button class="scenario-tab" data-mode="knee" aria-pressed="false"><span class="tab-number">02</span><span>膝躍反射<small>Knee-jerk reflex</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+    <button class="scenario-tab" data-mode="voluntary" aria-pressed="false"><span class="tab-number">03</span><span>隨意動作<small>Voluntary action</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+  </nav>
+  <div class="lab-grid">
+    <section class="diagram-card" aria-labelledby="diagram-title">
+      <div class="card-topline"><div><p class="eyebrow" id="mode-english">WITHDRAWAL REFLEX</p><h3 id="diagram-title">手先縮回，還是先感到痛？</h3></div><label class="label-toggle"><input type="checkbox" id="labels-toggle" checked>構造標示</label></div>
+      <p class="scroll-hint">← 左右滑動主圖，查看完整神經路徑 →</p>
+      <div class="diagram-wrap">
+      <svg id="anatomy" viewBox="0 0 980 570" role="img" aria-labelledby="svg-title svg-description">
+        <title id="svg-title">退縮反射與通往大腦的神經路徑</title>
+        <desc id="svg-description">感覺神經元經背根進入脊髓；運動神經元從腹根離開。局部反射弧與通往大腦的感覺路徑並行，脊髓內另有大腦的下行運動路徑。</desc>
+        <defs>
+          <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4dfca"/><stop offset="1" stop-color="#e9bfa2"/></linearGradient>
+          <linearGradient id="muscle" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d6897f"/><stop offset="1" stop-color="#b85f59"/></linearGradient>
+          <linearGradient id="cord-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f5e9"/><stop offset="1" stop-color="#eae5d6"/></linearGradient>
+          <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#d9e4e1"/></pattern>
+          <filter id="signal-glow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3"/></filter>
+          <marker id="arrow-sensory" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="m0 0 6 3.5L0 7" fill="none" stroke="#c47c15" stroke-width="1.4"/></marker>
+          <marker id="arrow-motor" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="m0 0 6 3.5L0 7" fill="none" stroke="#3276bd" stroke-width="1.4"/></marker>
+          <marker id="arrow-up" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="m0 0 6 3.5L0 7" fill="none" stroke="#9262b4" stroke-width="1.4"/></marker>
+          <marker id="arrow-down" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="m0 0 6 3.5L0 7" fill="none" stroke="#d56463" stroke-width="1.4"/></marker>
+        </defs>
+        <rect x="8" y="4" width="964" height="554" rx="18" fill="url(#grid)" opacity=".65"/>
+        <g class="anatomy-labels"><text class="zone-label" x="42" y="38">周邊神經系統 PNS</text><text class="zone-label" x="628" y="38">中樞神經系統 CNS</text></g>
+        <path d="M578 58V528" stroke="#dce5e1" stroke-dasharray="4 7"/>
+        <!-- Cord: axons stay within the central cord, then connect to the transverse schematic. -->
+        <path d="M708 144V294Q776 323 846 294V144" fill="url(#cord-fill)" stroke="#cbc6b4" stroke-width="1.7"/>
+        <g class="anatomy-labels"><text class="tiny-label" x="780" y="175" text-anchor="middle">脊髓內</text></g>
+        <ellipse cx="764" cy="365" rx="160" ry="121" fill="url(#cord-fill)" stroke="#b6ad98" stroke-width="2"/>
+        <path d="M764 337C743 322 703 283 669 270C657 291 677 325 682 345C645 368 644 421 667 442C697 453 731 405 764 395C797 405 830 453 861 442C883 421 882 368 846 345C851 325 871 291 859 270C825 283 786 322 764 337Z" fill="#c6c2b5" stroke="#a49f91" stroke-width="1.7"/>
+        <path d="M764 245v25M764 461v25" stroke="#b6ad98" stroke-width="1.5"/>
+        <circle cx="764" cy="369" r="6.5" fill="#fcfaf3" stroke="#a49f91"/>
+        <!-- Mixed spinal nerve, separating into dorsal and ventral roots. -->
+        <g fill="none" stroke="#dfe8cf" stroke-linecap="round"><path d="M402 376h29" stroke-width="30"/><path d="M429 370C448 322 452 305 483 305C530 305 565 294 610 297" stroke-width="20"/><path d="M428 384C474 421 545 448 616 426" stroke-width="18"/></g>
+        <ellipse cx="491" cy="300" rx="28" ry="19" fill="#d6e2c2" stroke="#aabb93" stroke-width="1.5"/>
+        <!-- Brain is a functional schematic rather than a cortical map. -->
+        <g id="brain-group"><path id="brain-shape" d="M666 83C652 62 669 42 692 44C700 23 732 23 748 35C765 20 796 25 808 38C836 26 860 44 860 57C891 55 909 82 898 101C908 127 882 146 858 139H695C667 142 653 114 666 100Z" fill="#e8edef" stroke="#a2b5bb" stroke-width="1.8"/>
+          <path d="M683 70q19-17 37 0m15-24q-7 20 6 25m25-24q-8 13 1 20m23-20q18 0 13 18m25-7q-17 14 2 23m39-9q-18 10-14 24" fill="none" stroke="#c0cdd1" stroke-width="2"/>
+          <text x="784" y="63" text-anchor="middle" class="structure-title">大腦</text>
+          <circle id="area-sensory" cx="700" cy="106" r="13" fill="#f6f1fa" stroke="#9262b4"/><circle id="area-association" cx="775" cy="88" r="13" fill="#f0f5f1" stroke="#108475"/><circle id="area-motor" cx="849" cy="106" r="13" fill="#fdf0ef" stroke="#d56463"/>
+          <text class="micro-label" x="700" y="134" text-anchor="middle">感覺區</text><text class="micro-label" x="775" y="117" text-anchor="middle">聯合區</text><text class="micro-label" x="849" y="134" text-anchor="middle">運動區</text>
+        </g>
+        <!-- Arm: original SVG illustration with joint, bones, muscle and moving forearm. -->
+        <g id="arm-anatomy">
+          <path d="M356 292C377 311 344 382 306 421Q287 443 267 422C287 378 309 333 332 295Q344 281 356 292Z" fill="url(#skin)" stroke="#bb9275" stroke-width="1.6"/>
+          <path d="M347 309 288 408" fill="none" stroke="#f9eed5" stroke-width="10" stroke-linecap="round"/><path d="M347 309 288 408" fill="none" stroke="#d5c5a1" stroke-width="1.3"/>
+          <path id="arm-muscle" class="effector-muscle" d="M345 313C346 341 334 374 304 391C309 364 318 334 345 313Z" fill="url(#muscle)" stroke="#ac615a" stroke-width="1.2"/>
+          <path d="M339 325 312 379m32-41-23 39m8-33-16 27" stroke="#e9a99a" stroke-width="1.1"/>
+          <g id="forearm"><path d="M289 395C251 393 207 399 165 399L146 394Q138 387 130 393L115 399Q106 403 112 410L139 424Q151 428 170 424L281 427Q306 425 299 408Z" fill="url(#skin)" stroke="#bb9275" stroke-width="1.6"/>
+            <path d="M277 408 168 410m109 8-109 1" stroke="#f9eed5" stroke-width="5" stroke-linecap="round"/>
+            <path d="m133 403 12 3m-19 1 14 4" stroke="#bb9275" fill="none"/>
+            <circle id="arm-receptor" cx="129" cy="407" r="6" fill="#fff9e8" stroke="#c47c15" stroke-width="2"/>
+          </g>
+          <circle cx="288" cy="409" r="8" fill="#f7e6c4" stroke="#ccb78e"/>
+          <g id="sharp-object"><path d="M76 456h45l-6 54H82Z" fill="#d4b290" stroke="#b48d69"/><path d="M89 455V410q0-10 8-10t8 10v45m-14-19-14-12v-12m26 18 14-11v-15" fill="none" stroke="#6c9d7b" stroke-width="11" stroke-linecap="round"/><path d="m98 403 22 1m-23 20 14-2m-23 14-13-2" stroke="#537d5f" stroke-width="1.5"/><path d="m115 400 14 7-14 3" fill="#718e69" stroke="#537d5f"/></g>
+          <g id="soft-pad" hidden><rect x="77" y="410" width="73" height="23" rx="11" fill="#bed9d6" stroke="#82aaa5"/><path d="M83 438h62v49H83" fill="#e6eeeb" stroke="#bbccc5"/></g>
+          <g class="anatomy-labels"><path d="M236 320h49l35 26" class="leader"/><path id="arm-receptor-leader" d="M128 407 139 358h83" class="leader"/><text x="221" y="311" class="diagram-label">手臂屈肌</text><text id="arm-receptor-label" x="116" y="348" class="diagram-label">皮膚痛覺感受器</text></g>
+        </g>
+        <!-- Leg, quadriceps muscle spindle, patella, patellar tendon and reflex hammer. -->
+        <g id="leg-anatomy" hidden>
+          <path d="M365 299C362 325 315 345 226 373Q194 385 181 360C182 342 205 329 231 320L341 285Q361 280 365 299Z" fill="url(#skin)" stroke="#bb9275" stroke-width="1.7"/>
+          <path d="m344 309-135 43" stroke="#faedd0" stroke-width="12" stroke-linecap="round"/><path d="m344 309-135 43" stroke="#d4c49f" stroke-width="1.3"/>
+          <g id="lowerleg"><path d="M183 359C204 351 219 364 215 391L210 489Q212 500 204 507L175 527Q153 536 144 527Q139 517 152 512L181 492L174 391Q169 370 183 359Z" fill="url(#skin)" stroke="#bb9275" stroke-width="1.7"/><path d="m194 385 3 109-34 24" fill="none" stroke="#f9ecd0" stroke-width="10" stroke-linecap="round"/><path d="m194 385 3 109-34 24" fill="none" stroke="#d1bc94" stroke-width="1.1"/><path d="m207 394-4 89" stroke="#d9c6a1" stroke-width="3"/></g>
+          <path id="leg-muscle" class="effector-muscle" d="M343 293C327 325 276 343 214 353C229 326 292 301 343 293Z" fill="url(#muscle)" stroke="#ac615a" stroke-width="1.3"/>
+          <path d="m324 305-86 34m93-28-83 33m58-33-55 23" stroke="#e9a99a" stroke-width="1.2"/>
+          <path d="M218 348 193 357 189 385" fill="none" stroke="#eee5cf" stroke-width="8"/><path d="m193 371-4 16" stroke="#a9946c" stroke-width="2"/>
+          <ellipse cx="189" cy="356" rx="10" ry="14" fill="#f8ebc8" stroke="#bca479" stroke-width="1.6"/>
+          <g id="muscle-spindle"><ellipse cx="280" cy="325" rx="19" ry="7" transform="rotate(-18 280 325)" fill="#f9ebc0" stroke="#bc8427" stroke-width="1.6"/><path d="m264 329 7-7 5 5 5-8 5 5 9-5" fill="none" stroke="#c47c15" stroke-width="1.7"/></g>
+          <g id="hammer"><path d="m113 449 42-63" stroke="#b1bdbe" stroke-width="10" stroke-linecap="round"/><path d="m113 449 42-63" stroke="#7f9498" stroke-width="2"/><path d="m146 373 26 14" stroke="#587076" stroke-width="15" stroke-linecap="round"/><path d="m150 371-5 9m26 0-5 11" stroke="#344f56" stroke-width="7" stroke-linecap="round"/></g>
+          <g id="tap-lines" opacity="0" stroke="#c47c15" stroke-width="3"><path d="m169 366-10-7m12 17-12 1m13 8-9 9"/></g>
+          <g class="anatomy-labels"><text x="248" y="264" class="diagram-label">股四頭肌</text><path d="M287 272 303 302" class="leader"/><text x="213" y="220" class="diagram-label">肌梭：肌肉內的牽張感受器</text><path d="M282 229 280 315" class="leader"/><text x="59" y="322" class="diagram-label">髕骨</text><path d="M96 327 178 350" class="leader"/><text x="58" y="349" class="diagram-label">髕腱</text><path d="M96 350 180 378" class="leader"/><text x="58" y="476" class="diagram-label">反射鎚</text></g>
+        </g>
+        <!-- Individually drawn neurones: gaps indicate synapses, not fused nerves. -->
+        <g id="nerve-paths" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path id="path-sensory" class="nerve sensory" d="M129 407C229 385 300 427 383 369L429 369C448 322 452 305 483 305L510 305C560 305 605 292 666 312"/>
+          <path id="path-direct" class="nerve sensory" d="M666 312C651 347 655 383 679 405" hidden/>
+          <path id="path-inter" class="nerve inter" d="M676 315C705 337 694 376 680 405"/>
+          <path id="path-motor" class="nerve motor" d="M686 418C644 443 575 441 530 410L441 410C395 410 358 384 321 352"/>
+          <path id="path-upRelay" class="nerve ascend" d="M676 308Q699 293 719 310"/>
+          <path id="path-ascend" class="nerve ascend" d="M719 310Q734 293 734 258V166Q734 145 714 144Q700 143 700 120"/>
+          <path id="path-descend" class="nerve descend" d="M849 120Q849 145 824 151V315"/>
+          <path id="path-downRelay" class="nerve descend" d="M824 315C824 370 741 380 699 408"/>
+          <path id="path-cortexSense" class="cortex-path" d="M711 102 762 91" stroke="#108475"/>
+          <path id="path-cortexMotor" class="cortex-path" d="M788 91 837 103" stroke="#108475"/>
+        </g>
+        <!-- Sensory soma is on a short side branch: no synapse in the DRG. -->
+        <path d="M491 305v-13" stroke="#c47c15" stroke-width="3"/><circle cx="491" cy="286" r="8" fill="#fff6df" stroke="#c47c15" stroke-width="2.5"/><circle cx="491" cy="286" r="2.3" fill="#c47c15"/>
+        <circle id="inter-soma" cx="695" cy="345" r="7" fill="#e2f2ec" stroke="#108475" stroke-width="2.5"/>
+        <circle cx="686" cy="418" r="10" fill="#e7f1fb" stroke="#3276bd" stroke-width="2.5"/><circle cx="686" cy="418" r="3" fill="#3276bd"/>
+        <circle id="up-relay-soma" cx="695" cy="300" r="5.5" fill="#f5eefa" stroke="#9262b4" stroke-width="2"/>
+        <g id="synapses"><path id="sensory-synapse" d="m666 309 4 4-4 4m10-9-4 4 4 4" fill="none" stroke="#657b78" stroke-width="1.5"/><path d="m679 402 4 4-4 4m10-2-4 4 4 4m11-13-3 6 5 2" fill="none" stroke="#657b78" stroke-width="1.5"/></g>
+        <g id="direction-arrows" fill="none" stroke-width="2"><path id="sensory-arrow" d="M397 369h19" stroke="#c47c15" marker-end="url(#arrow-sensory)"/><path d="M494 410h-21" stroke="#3276bd" marker-end="url(#arrow-motor)"/><path d="M734 226v-23" stroke="#9262b4" marker-end="url(#arrow-up)"/><path d="M824 212v24" stroke="#d56463" marker-end="url(#arrow-down)"/></g>
+        <g class="anatomy-labels">
+          <text x="424" y="246" class="diagram-label">背根神經節</text><path d="M488 252v23" class="leader"/>
+          <text x="539" y="270" class="diagram-label">背根</text><path d="M560 276v22" class="leader"/>
+          <text x="474" y="463" class="diagram-label">腹根</text><path d="M503 446v-20" class="leader"/>
+          <text x="376" y="458" class="diagram-label">脊神經</text><path d="M411 442v-47" class="leader"/>
+          <text x="624" y="235" class="direction-label">背側</text><text x="626" y="501" class="direction-label">腹側</text>
+          <text x="905" y="301" class="diagram-label">白質</text><path d="M901 306 873 311" class="leader"/>
+          <text x="905" y="396" class="diagram-label">灰質</text><path d="M900 390 854 392" class="leader"/>
+          <text x="870" y="361" class="diagram-label">中央管</text><path d="M866 365h-91" class="leader"/>
+          <text x="747" y="505" class="structure-title" text-anchor="middle">脊髓橫切面</text>
+          <text id="local-neuron-label" x="691" y="368" class="micro-label">中間</text><text id="local-neuron-label2" x="691" y="383" class="micro-label">神經元</text>
+        </g>
+        <g id="cut-marks"></g><g id="signals"></g>
+        <g id="limb-message"><rect x="210" y="485" width="324" height="40" rx="12" fill="#e9f3ed"/><circle cx="231" cy="505" r="4" fill="#108475"/><text id="limb-message-text" x="245" y="511" class="diagram-label">肌肉放鬆 · 等待刺激</text></g>
+        <text x="40" y="549" class="micro-label">構造與路徑為教學示意，非按比例；上方縱向路徑與下方橫切面採用不同視角。</text>
+      </svg>
+      <div class="stimulus-caption"><span class="stimulus-icon" aria-hidden="true">→</span><span>本次刺激</span><strong id="stimulus-text">手指接觸尖銳物件</strong></div>
+      </div>
+      <div class="legend" aria-label="神經路徑圖例"><span><i class="line-key sensory-key"></i>感覺神經元</span><span><i class="line-key inter-key"></i>中間神經元</span><span><i class="line-key motor-key"></i>運動神經元</span><span><i class="line-key ascend-key"></i>上行路徑</span><span><i class="line-key descend-key"></i>下行路徑</span><span class="signal-key"><i></i>神經脈衝</span></div>
+      <div class="transport"><div class="transport-main"><button id="run-button" class="primary-button"><span aria-hidden="true">▶</span> 開始模擬</button><button id="step-button" class="outline-button" title="前進至下一個關鍵事件">逐步 <span aria-hidden="true">›</span></button><button id="reset-button" class="icon-button" aria-label="重播前重設動畫" title="重設動畫，保留實驗條件">↺</button><label class="speed-control">速度<select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div><span id="play-status" role="status">準備就緒</span></div>
+      <div class="timeline"><label for="timeline-range" class="sr-only">動畫進度，可拖動觀察各階段</label><input type="range" id="timeline-range" min="0" max="1000" value="0" disabled><span>教學慢放・非實測時間</span></div>
+    </section>
+
+    <aside class="experiment-panel" aria-label="實驗控制台">
+      <section class="settings-card"><div class="section-heading"><span class="step-index">1</span><h3>設定實驗條件</h3><button id="heal-button" class="text-button">全部復原</button></div>
+        <p class="muted compact">選擇路徑，模擬完全受損；可複選。</p>
+        <label class="preset-label" for="preset">快速對照</label><select id="preset"><option value="none">正常：所有路徑完整</option><option value="sensory">感覺神經元受損</option><option value="inter">反射弧內中間神經元受損</option><option value="motor">運動神經元受損</option><option value="ascend">上行感覺路徑受損</option><option value="descend">下行運動路徑受損</option><option value="custom" disabled>自訂多個受損部位</option></select>
+        <div id="lesion-buttons" class="lesion-buttons"></div>
+        <div id="voluntary-options" hidden><fieldset><legend>隨意動作如何開始？</legend><label><input type="radio" name="voluntary-trigger" value="touch" checked>先感到輕觸，才決定屈臂</label><label><input type="radio" name="voluntary-trigger" value="intention">大腦主動發令（沒有新刺激）</label></fieldset></div>
+        <p class="condition-note" id="condition-note">局部受損只中斷所選路徑，其他結構維持正常。</p>
+      </section>
+      <section class="prediction-card"><div class="section-heading"><span class="step-index">2</span><h3>先預測，再觀察</h3><span class="optional-pill">可選</span></div><div id="predictions"></div><p class="muted compact">播放時鎖定預測；完成後核對結果。</p></section>
+      <div class="inquiry-card"><span class="inquiry-symbol" aria-hidden="true">?</span><div><strong>想一想</strong><p id="inquiry-text">若訊息無法傳到大腦，手還會自動縮回嗎？</p></div></div>
+    </aside>
+
+    <section class="observation-card" aria-labelledby="observation-title">
+      <div class="observation-heading"><div class="section-heading"><span class="step-index">3</span><h3 id="observation-title">追蹤與解釋</h3></div><div class="segmented" role="group" aria-label="解說詳細程度"><button id="concise-button" aria-pressed="true" class="active">精簡流程</button><button id="detailed-button" aria-pressed="false">詳細解說</button></div></div>
+      <div id="flowchart" class="flowchart" aria-label="本次神經傳遞流程"></div>
+      <div id="live-event" class="live-event" role="status"><span class="event-indicator"></span><span id="live-event-text">先作預測，然後按「開始模擬」或「逐步」。</span></div>
+      <div class="result-grid" id="result-grid"><div class="result-cell"><span>反射動作</span><strong id="result-reflex">等待觀察</strong></div><div class="result-cell"><span id="sensation-heading">痛覺</span><strong id="result-sensation">等待觀察</strong></div><div class="result-cell"><span>本次隨意動作</span><strong id="result-voluntary">本次未測</strong></div></div>
+      <div id="prediction-feedback" hidden></div>
+      <div id="explanation" hidden><p class="takeaway" id="takeaway"></p><ul id="explanation-list"></ul><button id="test-voluntary-button" class="text-button">保留受損條件 → 另測主動屈臂能力</button></div>
+      <div id="details-panel" hidden><h4>神經脈衝事件紀錄</h4><ol id="event-log"></ol><div class="science-note"><strong>突觸不等於接線點</strong><p>相鄰神經元之間有突觸間隙，神經遞質把訊息由突觸前傳到突觸後。圖中不同神經元沒有融合成同一條神經元；背根神經節的感覺神經元細胞體也不是轉傳站。</p></div></div>
+    </section>
+  </div>
+  <section class="records-card" aria-labelledby="records-title"><div class="records-heading"><div><p class="eyebrow">COMPARE & EXPLAIN</p><h3 id="records-title">實驗比較紀錄 <span id="record-count">0</span></h3></div><div><button id="export-button" class="outline-button" disabled>匯出 CSV ↓</button><button id="clear-records-button" class="text-button" disabled>清除紀錄</button></div></div><p id="records-empty" class="muted">完成實驗後會自動加入本頁紀錄，方便比較不同受損條件。重新整理網頁會清空。</p><div class="table-scroll" id="records-wrap" hidden><table><caption class="sr-only">已完成的實驗結果</caption><thead><tr><th scope="col">情境</th><th scope="col">受損條件</th><th scope="col">反射</th><th scope="col">感覺</th><th scope="col">隨意動作</th></tr></thead><tbody id="records-body"></tbody></table></div></section>
+  <footer><span>反射弧實驗室 <i>／</i> 香港高中生物教學</span><button class="text-button" id="science-button">模型範圍與科學依據 ↗</button></footer>
+</main>
+
+<dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><div><p class="eyebrow">TEACHER'S NOTES</p><h2 id="guide-title">讓每次操作，都帶出一個概念。</h2></div><button id="close-guide" class="icon-button" aria-label="關閉教學指南">×</button></div><div class="dialog-content">
+  <h3>建議課堂次序</h3><ol class="lesson-plan"><li><strong>正常退縮反射</strong>先問「縮手或痛覺，哪個先？」逐步追蹤脊髓與大腦兩條支路。</li><li><strong>上行路徑受損</strong>預測「有反射、沒有本次感覺」，說明反射不必等待大腦。</li><li><strong>中間神經元受損</strong>預測「沒有退縮反射、仍有痛覺」。保留條件另測大腦主動屈臂。</li><li><strong>運動神經元受損</strong>比較感覺仍在，但局部反射及主動動作均不能完成。</li><li><strong>膝躍反射</strong>指出敲擊處是髕腱，感受器卻在股四頭肌內；比較兩個與三個神經元的主反射弧。</li><li><strong>隨意動作</strong>切斷感覺神經元，選「大腦主動發令」，檢驗「沒有新刺激也能主動動作」。</li></ol>
+  <h3>操作提示</h3><p>「開始模擬」可隨時暫停；「逐步」前進至下一個關鍵事件。拖動進度條可回看，速度只改變教學動畫。改變情境或受損條件會清除當次動畫及預測，已完成比較紀錄保留。切換情境保留受損條件；不適用的路徑會註明。</p><p>投影模式可放大主圖並收起設定面板；按 Esc 可離開投影模式。精簡流程適合首次講解，詳細解說提供事件紀錄及完整因果說明。預測可留空，播放不會被阻擋。</p>
+  <h3 id="science-scope">科學範圍與必要簡化</h3><ul>
+    <li>依據使用者提供教材第 17 章，尤其圖 17.14、17.16、17.17、17.18（頁 17-16、17-19、17-20、17-22）整合。所有圖像重新繪製。</li>
+    <li>這是<strong>功能路徑模型</strong>：每個受損開關代表所選路徑完全中斷，其他結構、感受器及肌肉正常。不是臨床脊髓損傷預測工具；未模擬脊髓休克、恢復期、病灶範圍或反射亢進。</li>
+    <li>大腦的感覺區、聯合區及運動區位置僅為功能示意，不是實際皮層分佈圖。</li>
+    <li>手臂圖示以屈肌收縮代表退縮反應；真實退縮反射涉及多個節段、屈肌及伸肌的協調。這裏省略拮抗肌的抑制及多突觸網絡。</li>
+    <li>膝躍反射只展示<strong>股四頭肌伸肌的單突觸主反射弧</strong>；拮抗肌的交互抑制會涉及中間神經元，未在主圖畫出。「主反射弧無中間神經元」並非整個反應完全不涉及中間神經元。</li>
+    <li>膝反射的上行支路表示<strong>肌梭的牽張訊息</strong>能傳到大腦；不把敲擊皮膚的觸覺或痛覺當作同一感受器訊號。真實敲擊可同時刺激其他感受器，本模型未畫出。</li>
+    <li>上行路徑是多級感覺傳遞的整合示意；退縮反射的傷害性感覺會在脊髓內轉傳，往對側上行，之後亦有其他中繼。膝反射的本體感覺及精細觸覺常經同側背柱上行至延髓才轉傳，兩個情境的圖中沒有畫脊髓上行轉傳細胞體。紫色長線代表整合功能路徑，<strong>不作特定神經束、交叉位置、節段或全部突觸數目的解剖定位</strong>。</li>
+    <li>下行運動控制可直接或經中間神經元影響脊髓運動神經元；圖中用一段灰質內轉傳代表。大腦發出的軸突與經腹根支配肌肉的運動神經元是不同細胞。</li>
+    <li>反射支路與上行感覺支路並行。「先反射、後察覺」是本課典型例子；動畫刻意慢放，長度、速度、間隔、訊號光點均不是生理量測，不能用動畫秒數比較真實反應時間。</li>
+    <li>隨意輕觸任務設定為「感到接觸後才決定屈臂」；若感覺中斷，不代表主動運動能力消失。改用「大腦主動發令」獨立測試。輕觸不招募本圖的退縮反射，並非反射弧從身體消失。</li>
+    <li>真實神經傳遞是電化學過程。神經脈衝沿神經纖維傳導，化學突觸以神經遞質跨越間隙；光點只是方向示意。</li>
+  </ul>
+  <h3>補充參考</h3><p><a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/14-3-motor-responses" target="_blank" rel="noreferrer">OpenStax Anatomy and Physiology 2e · Motor Responses</a><br><a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/14-2-central-processing" target="_blank" rel="noreferrer">OpenStax · Central Processing</a></p><p class="muted">本頁只作虛擬探究，不需要用尖銳或灼熱物件在學生身上示範。</p>
+</div></dialog>
+<noscript><p class="noscript">請啟用 JavaScript 才能操作模擬。本頁所有功能均在瀏覽器本機執行。</p></noscript>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "reflex-arc-classroom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline Traditional Chinese nervous system simulation for HK senior secondary biology",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/model.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "build": "node scripts/build.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}
