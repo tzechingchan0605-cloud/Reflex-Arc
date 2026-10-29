@@ -12,6 +12,7 @@
   const labelFor = key => key === 'reflex' ? '反射動作' : key === 'sensation' ? state.mode === 'withdrawal' ? '痛覺' : state.mode === 'knee' ? '牽張感覺' : '觸覺' : '隨意動作';
   const predictionKeys = () => state.mode === 'voluntary' ? state.intentional ? ['voluntary'] : ['sensation', 'voluntary'] : ['reflex', 'sensation'];
   let predictionSnapshot = {};
+  let microscope;
 
   function svgElement(tag, attrs) {
     const el = document.createElementNS(NS, tag);
@@ -86,7 +87,7 @@
     stop(); state.run = null; state.time = 0; state.recorded = false; state.eventSignature = '';
     predictionSnapshot = {};
     if (clearPredictions) makePredictions();
-    buildFlow(); updateLesions(); render();
+    buildFlow(); updateLesions(); microscope?.refresh(config()); render();
   }
   function setMode(mode, intentional) {
     state.mode = mode; state.intentional = mode === 'voluntary' && !!intentional;
@@ -285,7 +286,17 @@
   $('guide-button').addEventListener('click', () => openGuide(false)); $('science-button').addEventListener('click', () => openGuide(true));
   $('close-guide').addEventListener('click', () => $('guide-dialog').close());
   $('guide-dialog').addEventListener('click', e => { if (e.target === $('guide-dialog')) { const box = e.target.getBoundingClientRect(); if (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom) e.target.close(); } });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('guide-dialog').open) toggleProjection(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('guide-dialog').open && !$('synapse-dialog').open) toggleProjection(false); });
   document.addEventListener('visibilitychange', () => { if (document.hidden && state.playing) { stop(); render(); } });
+  microscope = createSynapseViewer({
+    pauseMain: () => { stop(); render(); },
+    getContext: site => {
+      const plan = state.run || buildRun(config());
+      const arrival = plan.segments.find(segment => segment.path === site.arrival);
+      if (!arrival || arrival.blocked) return '在本次受損條件下，訊號未能到達這個接點。這裏可獨立播放正常傳遞機制。';
+      if (state.run && state.time >= arrival.end) return '主圖的訊號已到達這個接點。這裏把正常傳遞過程分成五步放大觀察。';
+      return '這裏展示所選接點的正常傳遞機制；不代表主圖的訊號已到達這個位置。';
+    },
+  });
   buildLesions(); setMode('withdrawal');
 })();
