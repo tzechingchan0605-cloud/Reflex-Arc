@@ -171,21 +171,21 @@
           <defs><marker id="micro-red-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m0 0 7 4-7 4" fill="none" stroke="#c85c4c" stroke-width="2"/></marker><marker id="micro-contraction-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m0 0 7 4-7 4" fill="none" stroke="#197d70" stroke-width="2"/></marker><pattern id="micro-muscle-pattern" width="26" height="90" patternUnits="userSpaceOnUse"><rect width="26" height="90" fill="#f0d8cc"/><path d="M3 0v90M7 0v90M19 0v90" stroke="#d4a599" stroke-width="2"/></pattern></defs>
           <rect x="8" y="8" width="784" height="454" rx="18" fill="#f8faf6"/>
           <text id="micro-pre-name" x="400" y="33" text-anchor="middle" class="micro-cell-name">突觸前神經元的軸突</text>
-          <path d="M380 48h105v60C485 144 555 151 575 208C598 267 565 294 523 294H356C314 294 295 267 309 223C323 175 380 150 380 108Z" fill="#dce6e3" stroke="#7d9690" stroke-width="2.4"/>
+          <path id="micro-presynaptic" d="M380 48h105v60C485 144 555 151 575 208C598 267 565 294 523 294H356C314 294 295 267 309 223C323 175 380 150 380 108Z" fill="#dce6e3" stroke="#7d9690" stroke-width="2.4"/>
           <g id="micro-vesicles" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.7">
             <g transform="translate(389 177)"><circle r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
             <g transform="translate(449 156)"><circle r="15"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
-            <g transform="translate(516 202)"><circle r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
+            <g transform="translate(516 202)"><circle id="micro-labeled-vesicle" r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
             <g transform="translate(359 239)"><circle r="12"/><g class="stored-transmitter"><circle cx="-4" cy="-3" r="2"/><circle cx="4" cy="-3" r="2"/><circle cy="4" r="2"/></g></g>
             <g transform="translate(510 265)"><circle r="12"/><g class="stored-transmitter"><circle cx="-4" cy="-3" r="2"/><circle cx="4" cy="-3" r="2"/><circle cy="4" r="2"/></g></g>
           </g>
-          <g id="micro-release-vesicle" transform="translate(430 261)"><circle r="15" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.8"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2.5"/><circle cx="5" cy="-4" r="2.5"/><circle cy="5" r="2.5"/></g></g>
+          <g id="micro-release-vesicle" transform="translate(430 261)"><circle r="15" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.8"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2.5"/><circle id="micro-stored-label-target" cx="5" cy="-4" r="2.5"/><circle cy="5" r="2.5"/></g></g>
           <g id="micro-fusion" opacity="0"><path d="M415 294q0-24 15-24t15 24" fill="#f8faf6" stroke="#7d9690" stroke-width="2.4"/></g>
-          <g fill="#edcb86" stroke="#c89c48" stroke-width="1.6"><g transform="translate(470 209) rotate(20)"><rect x="-9" y="-23" width="18" height="46" rx="8"/><path d="m-5-16 8 6-8 6 8 6-8 6 8 6" fill="none"/></g><g transform="translate(418 123) rotate(-24)"><rect x="-8" y="-18" width="16" height="36" rx="7"/><path d="m-5-12 8 6-8 6 8 6-8 6" fill="none"/></g></g>
+          <g fill="#edcb86" stroke="#c89c48" stroke-width="1.6"><g transform="translate(470 209) rotate(20)"><rect id="micro-labeled-mitochondrion" x="-9" y="-23" width="18" height="46" rx="8"/><path d="m-5-16 8 6-8 6 8 6-8 6 8 6" fill="none"/></g><g transform="translate(418 123) rotate(-24)"><rect x="-8" y="-18" width="16" height="36" rx="7"/><path d="m-5-12 8 6-8 6 8 6-8 6" fill="none"/></g></g>
           <path id="micro-receiver" d="M245 371Q450 333 663 371V447H245Z" fill="#dde8ef" stroke="#8ca3b0" stroke-width="2.2"/>
           <g id="micro-muscle" hidden><path d="M245 371Q450 333 663 371V447H245Z" fill="url(#micro-muscle-pattern)" stroke="#b28b7f" stroke-width="2.2"/></g>
           <g id="micro-receptors" fill="#efe1ec" stroke="#af83a3" stroke-width="2">
-            <path data-receptor="0" d="M355 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
+            <path id="micro-receptor-label-target" data-receptor="0" d="M355 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="1" d="M415 354v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="2" d="M475 354v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="3" d="M535 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
@@ -193,14 +193,23 @@
           <g id="micro-transmitters"></g>
           <g id="micro-input-signal" stroke="#c85c4c" stroke-width="4" fill="none"><path d="M432 55v50" marker-end="url(#micro-red-arrow)"/></g>
           <g id="micro-output-signal" stroke="#c85c4c" stroke-width="4" fill="none" opacity="0"><path d="M456 388v42" marker-end="url(#micro-red-arrow)"/></g>
+          <g id="micro-muscle-signal" opacity="0"><path id="micro-muscle-signal-path" d="M370 389H385" fill="none" stroke="#c85c4c" stroke-width="4" marker-end="url(#micro-red-arrow)"/><text x="450" y="428" text-anchor="middle" fill="#c85c4c" font-size="14">電脈衝</text></g>
           <g id="micro-contraction" hidden fill="none" stroke="#197d70" stroke-width="3"><path d="M272 405h35" marker-end="url(#micro-contraction-arrow)"/><path d="M638 405h-35" marker-end="url(#micro-contraction-arrow)"/><text x="450" y="410" text-anchor="middle" fill="#197d70" stroke="none" font-size="14">肌肉收縮</text></g>
-          <g class="micro-labels"><text x="589" y="91">軸突</text><path d="M578 95 492 95"/><text x="84" y="184">突觸小體</text><path d="M169 180h160"/><text x="603" y="174">突觸小泡</text><path d="M592 178 529 195"/><text x="603" y="232">線粒體</text><path d="M592 229 484 213"/><text x="84" y="323">突觸間隙</text><path d="M174 319h125"/><text x="603" y="318">神經遞質</text><path d="M592 322 503 330"/><text x="84" y="390">受體部位</text><path d="M174 386 357 363"/></g>
+          <g class="micro-labels">
+            <text x="589" y="91">軸突</text><path id="micro-label-axon" data-target="micro-presynaptic" d="M578 95H485"/>
+            <text x="84" y="184">突觸小體</text><path id="micro-label-knob" data-target="micro-presynaptic" d="M169 180H246L310 245"/>
+            <text x="603" y="174">突觸小泡</text><path id="micro-label-vesicle" data-target="micro-labeled-vesicle" d="M592 178L527 198"/>
+            <text x="603" y="246">線粒體</text><path id="micro-label-mitochondrion" data-target="micro-labeled-mitochondrion" d="M592 242H548L470 209"/>
+            <text x="84" y="323">突觸間隙</text><path id="micro-label-cleft" data-target="micro-cleft-bracket" d="M174 319H260L329 325"/><path id="micro-cleft-bracket" d="M356 294H329V356H356"/>
+            <text x="603" y="318">神經遞質</text><path id="micro-label-transmitter" data-target="micro-stored-label-target" d="M592 322L435 257"/>
+            <text x="84" y="390">受體部位</text><path id="micro-label-receptor" data-target="micro-receptor-label-target" d="M174 386H290L358.5 351"/>
+          </g>
           <text id="micro-post-name" x="450" y="464" text-anchor="middle" class="micro-cell-name">下一個神經元的樹突</text>
         </svg>
         <p class="micro-scroll-hint">← 左右滑動，查看完整放大圖 →</p>
-        <div class="micro-legend"><span><i class="micro-impulse-key"></i>神經脈衝</span><span><i class="micro-transmitter-key"></i>神經遞質</span><span id="micro-contraction-key" hidden><i class="micro-contraction-key"></i>肌肉收縮方向</span><span>示意圖・非按比例</span></div>
+        <div class="micro-legend"><span><i class="micro-impulse-key"></i><span id="micro-impulse-label">神經脈衝</span></span><span><i class="micro-transmitter-key"></i>神經遞質</span><span id="micro-contraction-key" hidden><i class="micro-contraction-key"></i>肌肉收縮方向</span><span>示意圖・非按比例</span></div>
       </div>
-      <div class="micro-steps-panel"><p class="eyebrow">五個步驟，追蹤傳遞</p><ol id="micro-steps" class="micro-steps"></ol></div>
+      <div class="micro-steps-panel"><p class="eyebrow" id="micro-steps-heading">五個步驟，追蹤傳遞</p><ol id="micro-steps" class="micro-steps"></ol></div>
     </div>
     <div class="micro-current" aria-live="polite" aria-atomic="true"><span id="micro-step-count">步驟 1 / 5</span><p id="micro-current-text"></p></div>
     <div class="micro-controls"><div><button id="micro-play" class="primary-button">▶ 播放傳遞</button><button id="micro-next" class="outline-button">下一步 ›</button><button id="micro-reset" class="icon-button" aria-label="重設微觀動畫">↺</button></div><label>速度<select id="micro-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
@@ -212,7 +221,7 @@
 <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><div><p class="eyebrow">TEACHER'S NOTES</p><h2 id="guide-title">讓每次操作，都帶出一個概念。</h2></div><button id="close-guide" class="icon-button" aria-label="關閉教學指南">×</button></div><div class="dialog-content">
   <h3>建議課堂次序</h3><ol class="lesson-plan"><li><strong>正常退縮反射</strong>先問「縮手或痛覺，哪個先？」逐步追蹤脊髓與大腦兩條支路。</li><li><strong>上行路徑受損</strong>預測「有反射、沒有本次感覺」，說明反射不必等待大腦。</li><li><strong>中間神經元受損</strong>預測「沒有退縮反射、仍有痛覺」。保留條件另測大腦主動屈臂。</li><li><strong>運動神經元受損</strong>比較感覺仍在，但局部反射及主動動作均不能完成。</li><li><strong>膝躍反射</strong>指出敲擊處是髕腱，感受器卻在股四頭肌內；比較兩個與三個神經元的主反射弧。</li><li><strong>隨意動作</strong>切斷感覺神經元，選「大腦主動發令」，檢驗「沒有新刺激也能主動動作」。</li></ol>
   <h3>操作提示</h3><p>「開始模擬」可隨時暫停；「逐步」前進至下一個關鍵事件。拖動進度條可回看，速度只改變教學動畫。改變情境或受損條件會清除當次動畫及預測，已完成比較紀錄保留。切換情境保留受損條件；不適用的路徑會註明。</p><p>投影模式可放大主圖並收起設定面板；按 Esc 可離開投影模式。精簡流程適合首次講解，詳細解說提供事件紀錄及完整因果說明。預測可留空，播放不會被阻擋。</p>
-  <p>點選圖中的編號圓圈或「突觸放大鏡」按鈕，可觀察該接點的微觀傳遞。五個步驟及神經元之間的標示依課本第 17-7、17-8 頁圖 17.6 編排；肌肉版本把接收一方改成肌纖維，結尾顯示肌肉收縮。可逐步、暫停或重播；關閉後主圖保持原進度。放大圖展示正常傳遞機制，不會把神經路徑受損當作突觸受損。</p>
+  <p>點選圖中的編號圓圈或「突觸放大鏡」按鈕，可觀察該接點的微觀傳遞。神經元之間的五步及標示依課本第 17-7、17-8 頁圖 17.6 編排；肌肉版按同一原理延伸為六步，先顯示肌纖維產生電脈衝，再顯示電脈衝引致肌肉收縮。可逐步、暫停或重播；關閉後主圖保持原進度。放大圖展示正常傳遞機制，不會把神經路徑受損當作突觸受損。</p>
   <h3 id="science-scope">科學範圍與必要簡化</h3><ul>
     <li>依據使用者提供教材第 17 章，尤其圖 17.14、17.16、17.17、17.18（頁 17-16、17-19、17-20、17-22）整合。所有圖像重新繪製。</li>
     <li>這是<strong>功能路徑模型</strong>：每個受損開關代表所選路徑完全中斷，其他結構、感受器及肌肉正常。不是臨床脊髓損傷預測工具；未模擬脊髓休克、恢復期、病灶範圍或反射亢進。</li>

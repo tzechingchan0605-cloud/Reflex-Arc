@@ -27,10 +27,11 @@
 .synapse-hotspot{cursor:pointer;outline:none}.synapse-hit-area{fill:#fff;fill-opacity:.01;stroke:none}.synapse-ring{fill:#fffff5;fill-opacity:.92;stroke:#197d70;stroke-width:1.6}.synapse-hotspot text{font:bold 11px Arial,sans-serif;fill:#116052;pointer-events:none}.synapse-hotspot:hover .synapse-ring,.synapse-hotspot:focus-visible .synapse-ring{stroke:#c47c15;stroke-width:3;fill:#fff4cb}
 .synapse-dialog{width:min(1100px,96vw);max-height:94vh}.synapse-dialog .dialog-heading{padding:20px 25px 16px}.synapse-subtitle{font-size:13px;color:var(--teal);margin:7px 0 0;line-height:1.8}.synapse-content{padding:0 24px 20px}.synapse-context{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);padding:12px 0}.synapse-location{font-size:10px;padding:5px 9px;white-space:nowrap;background:#eaf2e7;color:var(--teal-dark);border-radius:5px}.synapse-context p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}.synapse-layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;padding-top:20px;align-items:center}.micro-illustration{min-width:0}.micro-illustration svg{display:block;width:100%;height:auto}.micro-cell-name{font-size:12px;fill:#50685d}.micro-labels text{font-size:13px;fill:#4f655d}.micro-labels path{stroke:#9eafa4;stroke-width:1;fill:none}.stored-transmitter{fill:#8c67a0;stroke:none}.micro-transmitter{fill:#8c67a0;stroke:#725083;stroke-width:.6}.micro-transmitter.bound{fill:#b86c92;stroke:#854c6b;stroke-width:1.2}.micro-bound{fill:#e4bed4!important;stroke:#a55d86!important}.micro-legend{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:15px;font-size:10px;color:var(--muted);padding:10px 5px}.micro-legend span{display:flex;align-items:center;gap:7px}.micro-impulse-key{width:18px;border-top:3px solid #c85c4c}.micro-transmitter-key{width:6px;height:6px;background:#8c67a0;border-radius:50%}.micro-legend span:last-child{font-size:9px;color:#8c998e}.micro-steps-panel{padding:5px 0}.micro-steps-panel .eyebrow{font-family:inherit;font-size:11px;letter-spacing:1px;margin-bottom:12px}.micro-steps{list-style:none;padding:0;margin:0;display:grid;gap:8px}.micro-steps button{width:100%;display:flex;align-items:flex-start;gap:10px;text-align:left;border:1px solid #e0e7dc;background:#fafcf8;border-radius:8px;padding:11px 12px;color:#788a7c;font-size:12px;line-height:1.8}.micro-steps button>span:first-child{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#edf1e8;flex-shrink:0;font:11px Arial,sans-serif;margin-top:1px}.micro-steps button.active{background:#e9f3e9;border-color:#81aa8b;color:#22583f}.micro-steps button.active>span:first-child{background:#197d70;color:#fff}.micro-steps button.complete{color:#4e7d5d}.micro-current{display:flex;gap:14px;align-items:center;background:#edf4e9;border-radius:8px;padding:12px 15px;margin-top:12px;min-height:58px}.micro-current>span{font-size:10px;white-space:nowrap;color:var(--teal)}.micro-current p{font-size:13px;color:#355e46;line-height:1.8;margin:0}.micro-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}.micro-controls>div{display:flex;gap:8px}.micro-controls label{font-size:10px;display:flex;align-items:center;gap:7px;color:var(--muted)}.micro-controls select{width:68px;font-size:11px}.micro-timeline{display:flex;align-items:center;gap:12px;margin-top:12px}.micro-timeline input{width:100%;height:4px;accent-color:var(--teal);flex:1;min-width:25px}.micro-timeline>span{font-size:9px;color:#849286;white-space:nowrap}.micro-key-idea{font-size:11px;line-height:1.9;color:#5b7461;margin:14px 0 6px;padding-top:12px;border-top:1px solid var(--border)}.micro-source,.micro-return-note{font-size:10px;line-height:1.8;color:#8b978b;margin:4px 0}.micro-return-note{color:var(--teal)}
 @media(min-width:1500px){.synapse-dialog{width:min(1250px,94vw)}.synapse-layout{grid-template-columns:minmax(0,1fr) 320px}.micro-steps button{font-size:14px;padding:14px}.micro-current p{font-size:15px}.synapse-subtitle{font-size:15px}}
-@media(max-width:800px){.synapse-layout{grid-template-columns:1fr;gap:10px;padding-top:12px}.micro-illustration{max-width:680px;width:100%;margin:auto}.micro-steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.micro-steps button{display:block;padding:9px 7px;font-size:10px;height:100%;line-height:1.8}.micro-steps button>span:first-child{margin-bottom:5px}.micro-steps-panel .eyebrow{margin-bottom:8px}.synapse-context{align-items:flex-start;gap:8px}.micro-labels text{font-size:14px}.synapse-dialog{max-height:94vh}.synapse-content{padding:0 16px 16px}}
+@media(max-width:800px){.synapse-layout{grid-template-columns:1fr;gap:10px;padding-top:12px}.micro-illustration{max-width:680px;width:100%;margin:auto}.micro-steps{grid-template-columns:repeat(var(--micro-step-count,5),minmax(0,1fr));gap:5px}.micro-steps button{display:block;padding:9px 7px;font-size:10px;height:100%;line-height:1.8}.micro-steps button>span:first-child{margin-bottom:5px}.micro-steps-panel .eyebrow{margin-bottom:8px}.synapse-context{align-items:flex-start;gap:8px}.micro-labels text{font-size:14px}.synapse-dialog{max-height:94vh}.synapse-content{padding:0 16px 16px}}
 @media(max-width:540px){.synapse-shortcuts{padding:10px 12px;gap:6px}.synapse-shortcut-label{width:100%;font-size:10px}.synapse-shortcuts button{font-size:9px;padding:5px 7px}.synapse-dialog{width:97vw;max-height:95vh;border-radius:12px}.synapse-dialog .dialog-heading{padding:14px 16px}.synapse-dialog .dialog-heading .eyebrow{font-size:9px;margin-bottom:6px}.synapse-subtitle{font-size:11px;margin-top:5px}.synapse-context{display:block;padding:10px 0}.synapse-context p{font-size:10px;margin-top:7px}.synapse-location{display:inline-block;font-size:9px}.synapse-content{padding:0 11px 14px}.micro-illustration{overflow-x:auto}.micro-illustration svg{min-width:490px}.micro-steps{grid-template-columns:1fr}.micro-steps button{display:flex;padding:8px 10px;font-size:11px;align-items:center}.micro-steps button>span:first-child{margin-bottom:0;width:19px;height:19px;font-size:10px}.micro-current{padding:10px;gap:9px;align-items:flex-start}.micro-current>span{font-size:9px;padding-top:4px}.micro-current p{font-size:11px}.micro-controls>div{gap:6px}.micro-controls .primary-button{min-width:105px}.micro-controls .outline-button{padding:7px}.micro-controls{gap:6px}.micro-controls select{width:53px;font-size:10px;padding:6px}.micro-controls label{gap:4px;font-size:9px}.micro-timeline>span{font-size:8px}.micro-key-idea{font-size:10px}.micro-source,.micro-return-note{font-size:9px}}
 @media print{.synapse-shortcuts,#synapse-hotspots{display:none}}
 .micro-contraction-key{width:18px;border-top:3px solid #197d70}.micro-scroll-hint{display:none}@media(max-width:540px){.micro-scroll-hint{display:block;font-size:9px;text-align:center;color:var(--teal);margin:7px 0}}
+.micro-labels path{stroke:#7d9385;stroke-width:1.25}.micro-labels #micro-cleft-bracket{stroke-width:1.5}
 
 </style>
 </head>
@@ -197,21 +198,21 @@
           <defs><marker id="micro-red-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m0 0 7 4-7 4" fill="none" stroke="#c85c4c" stroke-width="2"/></marker><marker id="micro-contraction-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="m0 0 7 4-7 4" fill="none" stroke="#197d70" stroke-width="2"/></marker><pattern id="micro-muscle-pattern" width="26" height="90" patternUnits="userSpaceOnUse"><rect width="26" height="90" fill="#f0d8cc"/><path d="M3 0v90M7 0v90M19 0v90" stroke="#d4a599" stroke-width="2"/></pattern></defs>
           <rect x="8" y="8" width="784" height="454" rx="18" fill="#f8faf6"/>
           <text id="micro-pre-name" x="400" y="33" text-anchor="middle" class="micro-cell-name">突觸前神經元的軸突</text>
-          <path d="M380 48h105v60C485 144 555 151 575 208C598 267 565 294 523 294H356C314 294 295 267 309 223C323 175 380 150 380 108Z" fill="#dce6e3" stroke="#7d9690" stroke-width="2.4"/>
+          <path id="micro-presynaptic" d="M380 48h105v60C485 144 555 151 575 208C598 267 565 294 523 294H356C314 294 295 267 309 223C323 175 380 150 380 108Z" fill="#dce6e3" stroke="#7d9690" stroke-width="2.4"/>
           <g id="micro-vesicles" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.7">
             <g transform="translate(389 177)"><circle r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
             <g transform="translate(449 156)"><circle r="15"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
-            <g transform="translate(516 202)"><circle r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
+            <g transform="translate(516 202)"><circle id="micro-labeled-vesicle" r="14"/><g class="stored-transmitter"><circle cx="-4" cy="-4" r="2"/><circle cx="5" cy="-3" r="2"/><circle cy="5" r="2"/></g></g>
             <g transform="translate(359 239)"><circle r="12"/><g class="stored-transmitter"><circle cx="-4" cy="-3" r="2"/><circle cx="4" cy="-3" r="2"/><circle cy="4" r="2"/></g></g>
             <g transform="translate(510 265)"><circle r="12"/><g class="stored-transmitter"><circle cx="-4" cy="-3" r="2"/><circle cx="4" cy="-3" r="2"/><circle cy="4" r="2"/></g></g>
           </g>
-          <g id="micro-release-vesicle" transform="translate(430 261)"><circle r="15" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.8"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2.5"/><circle cx="5" cy="-4" r="2.5"/><circle cy="5" r="2.5"/></g></g>
+          <g id="micro-release-vesicle" transform="translate(430 261)"><circle r="15" fill="#d5e6b8" stroke="#87a16d" stroke-width="1.8"/><g class="stored-transmitter"><circle cx="-5" cy="-4" r="2.5"/><circle id="micro-stored-label-target" cx="5" cy="-4" r="2.5"/><circle cy="5" r="2.5"/></g></g>
           <g id="micro-fusion" opacity="0"><path d="M415 294q0-24 15-24t15 24" fill="#f8faf6" stroke="#7d9690" stroke-width="2.4"/></g>
-          <g fill="#edcb86" stroke="#c89c48" stroke-width="1.6"><g transform="translate(470 209) rotate(20)"><rect x="-9" y="-23" width="18" height="46" rx="8"/><path d="m-5-16 8 6-8 6 8 6-8 6 8 6" fill="none"/></g><g transform="translate(418 123) rotate(-24)"><rect x="-8" y="-18" width="16" height="36" rx="7"/><path d="m-5-12 8 6-8 6 8 6-8 6" fill="none"/></g></g>
+          <g fill="#edcb86" stroke="#c89c48" stroke-width="1.6"><g transform="translate(470 209) rotate(20)"><rect id="micro-labeled-mitochondrion" x="-9" y="-23" width="18" height="46" rx="8"/><path d="m-5-16 8 6-8 6 8 6-8 6 8 6" fill="none"/></g><g transform="translate(418 123) rotate(-24)"><rect x="-8" y="-18" width="16" height="36" rx="7"/><path d="m-5-12 8 6-8 6 8 6-8 6" fill="none"/></g></g>
           <path id="micro-receiver" d="M245 371Q450 333 663 371V447H245Z" fill="#dde8ef" stroke="#8ca3b0" stroke-width="2.2"/>
           <g id="micro-muscle" hidden><path d="M245 371Q450 333 663 371V447H245Z" fill="url(#micro-muscle-pattern)" stroke="#b28b7f" stroke-width="2.2"/></g>
           <g id="micro-receptors" fill="#efe1ec" stroke="#af83a3" stroke-width="2">
-            <path data-receptor="0" d="M355 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
+            <path id="micro-receptor-label-target" data-receptor="0" d="M355 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="1" d="M415 354v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="2" d="M475 354v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
             <path data-receptor="3" d="M535 357v-10h7v7q8 10 16 0v-7h7v10q-15 22-30 0Z"/>
@@ -219,14 +220,23 @@
           <g id="micro-transmitters"></g>
           <g id="micro-input-signal" stroke="#c85c4c" stroke-width="4" fill="none"><path d="M432 55v50" marker-end="url(#micro-red-arrow)"/></g>
           <g id="micro-output-signal" stroke="#c85c4c" stroke-width="4" fill="none" opacity="0"><path d="M456 388v42" marker-end="url(#micro-red-arrow)"/></g>
+          <g id="micro-muscle-signal" opacity="0"><path id="micro-muscle-signal-path" d="M370 389H385" fill="none" stroke="#c85c4c" stroke-width="4" marker-end="url(#micro-red-arrow)"/><text x="450" y="428" text-anchor="middle" fill="#c85c4c" font-size="14">電脈衝</text></g>
           <g id="micro-contraction" hidden fill="none" stroke="#197d70" stroke-width="3"><path d="M272 405h35" marker-end="url(#micro-contraction-arrow)"/><path d="M638 405h-35" marker-end="url(#micro-contraction-arrow)"/><text x="450" y="410" text-anchor="middle" fill="#197d70" stroke="none" font-size="14">肌肉收縮</text></g>
-          <g class="micro-labels"><text x="589" y="91">軸突</text><path d="M578 95 492 95"/><text x="84" y="184">突觸小體</text><path d="M169 180h160"/><text x="603" y="174">突觸小泡</text><path d="M592 178 529 195"/><text x="603" y="232">線粒體</text><path d="M592 229 484 213"/><text x="84" y="323">突觸間隙</text><path d="M174 319h125"/><text x="603" y="318">神經遞質</text><path d="M592 322 503 330"/><text x="84" y="390">受體部位</text><path d="M174 386 357 363"/></g>
+          <g class="micro-labels">
+            <text x="589" y="91">軸突</text><path id="micro-label-axon" data-target="micro-presynaptic" d="M578 95H485"/>
+            <text x="84" y="184">突觸小體</text><path id="micro-label-knob" data-target="micro-presynaptic" d="M169 180H246L310 245"/>
+            <text x="603" y="174">突觸小泡</text><path id="micro-label-vesicle" data-target="micro-labeled-vesicle" d="M592 178L527 198"/>
+            <text x="603" y="246">線粒體</text><path id="micro-label-mitochondrion" data-target="micro-labeled-mitochondrion" d="M592 242H548L470 209"/>
+            <text x="84" y="323">突觸間隙</text><path id="micro-label-cleft" data-target="micro-cleft-bracket" d="M174 319H260L329 325"/><path id="micro-cleft-bracket" d="M356 294H329V356H356"/>
+            <text x="603" y="318">神經遞質</text><path id="micro-label-transmitter" data-target="micro-stored-label-target" d="M592 322L435 257"/>
+            <text x="84" y="390">受體部位</text><path id="micro-label-receptor" data-target="micro-receptor-label-target" d="M174 386H290L358.5 351"/>
+          </g>
           <text id="micro-post-name" x="450" y="464" text-anchor="middle" class="micro-cell-name">下一個神經元的樹突</text>
         </svg>
         <p class="micro-scroll-hint">← 左右滑動，查看完整放大圖 →</p>
-        <div class="micro-legend"><span><i class="micro-impulse-key"></i>神經脈衝</span><span><i class="micro-transmitter-key"></i>神經遞質</span><span id="micro-contraction-key" hidden><i class="micro-contraction-key"></i>肌肉收縮方向</span><span>示意圖・非按比例</span></div>
+        <div class="micro-legend"><span><i class="micro-impulse-key"></i><span id="micro-impulse-label">神經脈衝</span></span><span><i class="micro-transmitter-key"></i>神經遞質</span><span id="micro-contraction-key" hidden><i class="micro-contraction-key"></i>肌肉收縮方向</span><span>示意圖・非按比例</span></div>
       </div>
-      <div class="micro-steps-panel"><p class="eyebrow">五個步驟，追蹤傳遞</p><ol id="micro-steps" class="micro-steps"></ol></div>
+      <div class="micro-steps-panel"><p class="eyebrow" id="micro-steps-heading">五個步驟，追蹤傳遞</p><ol id="micro-steps" class="micro-steps"></ol></div>
     </div>
     <div class="micro-current" aria-live="polite" aria-atomic="true"><span id="micro-step-count">步驟 1 / 5</span><p id="micro-current-text"></p></div>
     <div class="micro-controls"><div><button id="micro-play" class="primary-button">▶ 播放傳遞</button><button id="micro-next" class="outline-button">下一步 ›</button><button id="micro-reset" class="icon-button" aria-label="重設微觀動畫">↺</button></div><label>速度<select id="micro-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
@@ -238,7 +248,7 @@
 <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><div><p class="eyebrow">TEACHER'S NOTES</p><h2 id="guide-title">讓每次操作，都帶出一個概念。</h2></div><button id="close-guide" class="icon-button" aria-label="關閉教學指南">×</button></div><div class="dialog-content">
   <h3>建議課堂次序</h3><ol class="lesson-plan"><li><strong>正常退縮反射</strong>先問「縮手或痛覺，哪個先？」逐步追蹤脊髓與大腦兩條支路。</li><li><strong>上行路徑受損</strong>預測「有反射、沒有本次感覺」，說明反射不必等待大腦。</li><li><strong>中間神經元受損</strong>預測「沒有退縮反射、仍有痛覺」。保留條件另測大腦主動屈臂。</li><li><strong>運動神經元受損</strong>比較感覺仍在，但局部反射及主動動作均不能完成。</li><li><strong>膝躍反射</strong>指出敲擊處是髕腱，感受器卻在股四頭肌內；比較兩個與三個神經元的主反射弧。</li><li><strong>隨意動作</strong>切斷感覺神經元，選「大腦主動發令」，檢驗「沒有新刺激也能主動動作」。</li></ol>
   <h3>操作提示</h3><p>「開始模擬」可隨時暫停；「逐步」前進至下一個關鍵事件。拖動進度條可回看，速度只改變教學動畫。改變情境或受損條件會清除當次動畫及預測，已完成比較紀錄保留。切換情境保留受損條件；不適用的路徑會註明。</p><p>投影模式可放大主圖並收起設定面板；按 Esc 可離開投影模式。精簡流程適合首次講解，詳細解說提供事件紀錄及完整因果說明。預測可留空，播放不會被阻擋。</p>
-  <p>點選圖中的編號圓圈或「突觸放大鏡」按鈕，可觀察該接點的微觀傳遞。五個步驟及神經元之間的標示依課本第 17-7、17-8 頁圖 17.6 編排；肌肉版本把接收一方改成肌纖維，結尾顯示肌肉收縮。可逐步、暫停或重播；關閉後主圖保持原進度。放大圖展示正常傳遞機制，不會把神經路徑受損當作突觸受損。</p>
+  <p>點選圖中的編號圓圈或「突觸放大鏡」按鈕，可觀察該接點的微觀傳遞。神經元之間的五步及標示依課本第 17-7、17-8 頁圖 17.6 編排；肌肉版按同一原理延伸為六步，先顯示肌纖維產生電脈衝，再顯示電脈衝引致肌肉收縮。可逐步、暫停或重播；關閉後主圖保持原進度。放大圖展示正常傳遞機制，不會把神經路徑受損當作突觸受損。</p>
   <h3 id="science-scope">科學範圍與必要簡化</h3><ul>
     <li>依據使用者提供教材第 17 章，尤其圖 17.14、17.16、17.17、17.18（頁 17-16、17-19、17-20、17-22）整合。所有圖像重新繪製。</li>
     <li>這是<strong>功能路徑模型</strong>：每個受損開關代表所選路徑完全中斷，其他結構、感受器及肌肉正常。不是臨床脊髓損傷預測工具；未模擬脊髓休克、恢復期、病灶範圍或反射亢進。</li>
@@ -389,12 +399,12 @@
 
 </script>
 <script>
-/* Five textbook-level steps, based on te_17_c.pdf pp. 17-7–17-8, fig. 17.6. */
+/* Textbook fig. 17.6: five neuronal steps; muscle extension adds contraction after the electrical impulse. */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
   const NS = 'http://www.w3.org/2000/svg';
-  const STEP_TIME = 1500, DURATION = STEP_TIME * 5;
+  const STEP_TIME = 1500;
   const sites = {
     'sensory-inter': { before: '感覺神經元', after: '中間神經元', short: '感覺 → 中間', modes: ['withdrawal'], point: [671, 313], arrival: 'sensory' },
     'inter-motor': { before: '中間神經元', after: '運動神經元', short: '中間 → 運動', modes: ['withdrawal'], point: [682, 409], arrival: 'inter' },
@@ -411,6 +421,7 @@
     const state = { mode: 'withdrawal', site: null, time: 0, playing: false, frame: 0, lastFrame: null, step: -1, origin: null };
     const dialog = $('synapse-dialog'), marks = new Map();
     let steps = [];
+    const duration = () => STEP_TIME * steps.length;
     function stop() { state.playing = false; cancelAnimationFrame(state.frame); state.lastFrame = null; }
     function makeSteps(muscle) {
       return [
@@ -418,11 +429,12 @@
         '突觸小泡釋出神經遞質。',
         '神經遞質藉擴散越過突觸間隙。',
         muscle ? '神經遞質與肌纖維上的受體部位結合。' : '神經遞質與樹突上的受體部位結合。',
-        muscle ? '肌纖維受到刺激，肌肉收縮。' : '樹突受到刺激，發出神經脈衝。',
+        muscle ? '肌纖維受到刺激，產生電脈衝。' : '樹突受到刺激，發出神經脈衝。',
+        ...(muscle ? ['電脈衝沿肌纖維傳遞，引致肌肉收縮。'] : []),
       ];
     }
     function seekStep(index) {
-      stop(); state.time = (index + 1) * STEP_TIME - (index === 4 ? 0 : 1); render();
+      stop(); state.time = (index + 1) * STEP_TIME - (index === steps.length - 1 ? 0 : 1); render();
     }
     function open(id, origin) {
       const original = sites[id];
@@ -437,12 +449,15 @@
       $('micro-pre-name').textContent = site.before + '的軸突';
       $('micro-post-name').textContent = site.muscle ? site.after : '下一個神經元的樹突（' + site.after + '）';
       $('micro-title').textContent = site.muscle ? '神經元把信息傳遞至肌纖維' : '神經脈衝越過突觸的傳遞';
-      $('micro-desc').textContent = site.before + '釋出神經遞質，藉擴散越過突觸間隙，與' + (site.muscle ? '肌纖維' : '樹突') + '上的受體部位結合，' + (site.muscle ? '使肌肉收縮。' : '使下一個神經元發出神經脈衝。');
+      $('micro-desc').textContent = site.before + '釋出神經遞質，藉擴散越過突觸間隙，與' + (site.muscle ? '肌纖維' : '樹突') + '上的受體部位結合，' + (site.muscle ? '使肌纖維產生電脈衝，再引致肌肉收縮。' : '使下一個神經元發出神經脈衝。');
       visible($('micro-muscle'), site.muscle); visible($('micro-receiver'), !site.muscle);
       visible($('micro-contraction-key'), site.muscle);
       $('micro-key-idea').textContent = '神經脈衝不能直接越過突觸間隙。神經遞質由突觸小體釋出，與' + (site.muscle ? '肌纖維' : '下一個神經元的樹突') + '上的受體部位結合，把信息沿圖示方向傳遞。';
-      $('micro-source').textContent = site.muscle ? '依課本第 17-7、17-8 頁圖 17.6 的傳遞原理延伸：接收一方改為肌纖維。' : '步驟及標示參照課本第 17-7、17-8 頁圖 17.6。';
+      $('micro-source').textContent = site.muscle ? '依課本第 17-7、17-8 頁圖 17.6 的傳遞原理延伸：肌纖維先產生電脈衝，再引致肌肉收縮。' : '步驟及標示參照課本第 17-7、17-8 頁圖 17.6。';
       steps = makeSteps(site.muscle);
+      $('micro-steps-heading').textContent = site.muscle ? '六個步驟，從傳遞到收縮' : '五個步驟，追蹤傳遞';
+      $('micro-steps').style.setProperty('--micro-step-count', steps.length);
+      $('micro-impulse-label').textContent = site.muscle ? '電脈衝' : '神經脈衝';
       $('micro-steps').replaceChildren(...steps.map((text, index) => {
         const li = document.createElement('li'), button = document.createElement('button');
         button.type = 'button'; button.dataset.microStep = index;
@@ -483,10 +498,28 @@
         button.append(badge, document.createTextNode(site.short)); button.addEventListener('click', () => open(id, button)); $('synapse-shortcuts').appendChild(button);
       }
     }
+    function inDiagram(element, x, y) {
+      const matrix = $('micro-diagram').getCTM().inverse().multiply(element.getCTM());
+      return new DOMPoint(x, y).matrixTransform(matrix);
+    }
+    function updateLabels(particles, muscle) {
+      // Follow a visible molecule instead of pointing at an empty fixed location.
+      const released = particles.filter(particle => Number(particle.getAttribute('opacity')) >= 0.5);
+      const target = released.reduce((rightmost, particle) => !rightmost || Number(particle.getAttribute('cx')) > Number(rightmost.getAttribute('cx')) ? particle : rightmost, null) || $('micro-stored-label-target');
+      if (released.length) target.id = 'micro-free-label-target';
+      const point = inDiagram(target, target.cx.baseVal.value, target.cy.baseVal.value);
+      $('micro-label-transmitter').setAttribute('data-target', target.id);
+      $('micro-label-transmitter').setAttribute('d', 'M592 322L' + (point.x + target.r.baseVal.value * 0.6) + ' ' + point.y);
+      // The cleft bracket touches both cell surfaces, including during shortening.
+      const t = 0.27;
+      const lower = inDiagram(muscle ? $('micro-muscle') : $('micro-receiver'), 245 + 410 * t + 8 * t * t, 371 - 76 * t + 76 * t * t);
+      $('micro-cleft-bracket').setAttribute('d', 'M356 294H329V' + lower.y + 'H' + lower.x);
+      $('micro-label-cleft').setAttribute('d', 'M174 319H260L329 ' + ((294 + lower.y) / 2));
+    }
     function render() {
       if (!state.site) return;
-      const t = state.time / STEP_TIME, step = Math.min(4, Math.floor(t)), muscle = !!state.site.muscle;
-      const arrival = clamp(t), release = clamp(t - 1), diffusion = clamp(t - 2), binding = clamp(t - 3), response = clamp(t - 4);
+      const t = state.time / STEP_TIME, step = Math.min(steps.length - 1, Math.floor(t)), muscle = !!state.site.muscle;
+      const arrival = clamp(t), release = clamp(t - 1), diffusion = clamp(t - 2), binding = clamp(t - 3), response = clamp(t - (muscle ? 5 : 4));
       $('micro-input-signal').setAttribute('transform', 'translate(0 ' + (arrival * 134) + ')');
       $('micro-input-signal').setAttribute('opacity', t < 1.2 ? '1' : '0');
       $('micro-release-vesicle').setAttribute('transform', 'translate(430 ' + (261 + release * 18) + ')');
@@ -510,34 +543,37 @@
       $('micro-receptors').classList.toggle('micro-bound', binding > 0.95);
       $('micro-output-signal').setAttribute('opacity', !muscle && t >= 4 ? 1 : 0);
       $('micro-output-signal').setAttribute('transform', 'translate(0 ' + (response * 8) + ')');
-      visible($('micro-contraction'), muscle && t >= 4);
+      $('micro-muscle-signal').setAttribute('opacity', muscle && t >= 4 && t < 5 ? 1 : 0);
+      $('micro-muscle-signal-path').setAttribute('d', 'M370 389H' + (385 + 170 * clamp(t - 4)));
+      visible($('micro-contraction'), muscle && t >= 5);
       $('micro-muscle').setAttribute('transform', 'translate(' + (muscle ? 45 * response : 0) + ' 0) scale(' + (1 - (muscle ? 0.1 * response : 0)) + ' 1)');
-      $('micro-play').textContent = state.playing ? 'Ⅱ 暫停' : state.time >= DURATION ? '↺ 再播一次' : state.time ? '▶ 繼續播放' : '▶ 播放傳遞';
-      $('micro-next').disabled = state.time >= DURATION;
-      $('micro-progress').value = Math.round(t * 1000);
+      updateLabels(particles, muscle);
+      $('micro-play').textContent = state.playing ? 'Ⅱ 暫停' : state.time >= duration() ? '↺ 再播一次' : state.time ? '▶ 繼續播放' : '▶ 播放傳遞';
+      $('micro-next').disabled = state.time >= duration();
+      $('micro-progress').value = Math.round(state.time / duration() * 5000);
       if (state.step !== step) {
         state.step = step;
-        $('micro-step-count').textContent = '步驟 ' + (step + 1) + ' / 5'; $('micro-current-text').textContent = steps[step];
+        $('micro-step-count').textContent = '步驟 ' + (step + 1) + ' / ' + steps.length; $('micro-current-text').textContent = steps[step];
         $('micro-steps').querySelectorAll('button').forEach((button, i) => { button.classList.toggle('active', i === step); button.classList.toggle('complete', i < step); if (i === step) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current'); });
       }
     }
     function play() {
       if (state.playing) { stop(); render(); return; }
-      if (state.time >= DURATION) state.time = 0;
+      if (state.time >= duration()) state.time = 0;
       state.playing = true; state.lastFrame = null;
       function frame(now) {
         if (!state.playing || !dialog.open) return;
-        if (state.lastFrame !== null) state.time = Math.min(DURATION, state.time + Math.min(100, now - state.lastFrame) * Number($('micro-speed').value));
+        if (state.lastFrame !== null) state.time = Math.min(duration(), state.time + Math.min(100, now - state.lastFrame) * Number($('micro-speed').value));
         state.lastFrame = now;
-        if (state.time >= DURATION) stop();
+        if (state.time >= duration()) stop();
         render(); if (state.playing) state.frame = requestAnimationFrame(frame);
       }
       state.frame = requestAnimationFrame(frame); render();
     }
     $('micro-play').addEventListener('click', play);
-    $('micro-next').addEventListener('click', () => { const current = Math.floor(state.time / STEP_TIME); const atEnd = state.time % STEP_TIME >= STEP_TIME - 2; seekStep(Math.min(4, atEnd ? current + 1 : current)); });
+    $('micro-next').addEventListener('click', () => { const current = Math.floor(state.time / STEP_TIME); const atEnd = state.time % STEP_TIME >= STEP_TIME - 2; seekStep(Math.min(steps.length - 1, atEnd ? current + 1 : current)); });
     $('micro-reset').addEventListener('click', () => { stop(); state.time = 0; state.step = -1; render(); });
-    $('micro-progress').addEventListener('input', () => { stop(); state.time = Number($('micro-progress').value) * STEP_TIME / 1000; render(); });
+    $('micro-progress').addEventListener('input', () => { stop(); state.time = Number($('micro-progress').value) * duration() / 5000; render(); });
     $('close-synapse').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => { stop(); if (state.origin?.isConnected) state.origin.focus({ preventScroll: true }); });
     dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } });
@@ -844,7 +880,7 @@
       const plan = state.run || buildRun(config());
       const arrival = plan.segments.find(segment => segment.path === site.arrival);
       if (!arrival || arrival.blocked) return '在本次受損條件下，訊號未能到達這個接點。這裏可獨立播放正常傳遞機制。';
-      if (state.run && state.time >= arrival.end) return '主圖的訊號已到達這個接點。這裏把正常傳遞過程分成五步放大觀察。';
+      if (state.run && state.time >= arrival.end) return '主圖的訊號已到達這個接點。這裏把正常傳遞過程分步放大觀察。';
       return '這裏展示所選接點的正常傳遞機制；不代表主圖的訊號已到達這個位置。';
     },
   });

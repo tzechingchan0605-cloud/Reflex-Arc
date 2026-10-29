@@ -159,7 +159,7 @@ async function check(name, fn) { await fn(); checks++; console.log('PASS', name)
       for (const id of expected) {
         await page.locator('#hotspot-' + id).click();
         assert.equal(await page.locator('#synapse-dialog').isVisible(), true);
-        assert.equal(await page.locator('#micro-step-count').textContent(), '步驟 1 / 5');
+        assert.equal(await page.locator('#micro-step-count').textContent(), '步驟 1 / ' + (id === 'motor-muscle' ? 6 : 5));
         await page.locator('#close-synapse').click();
       }
     }
@@ -193,7 +193,13 @@ async function check(name, fn) { await fn(); checks++; console.log('PASS', name)
       assert.match(await page.locator('#synapse-subtitle').textContent(), new RegExp(muscle + '的肌纖維'));
       assert.match(await page.locator('[data-micro-step="3"]').textContent(), /肌纖維上的受體部位/);
       await page.locator('[data-micro-step="4"]').click();
-      assert.equal(await page.locator('#micro-current-text').textContent(), '肌纖維受到刺激，肌肉收縮。');
+      assert.equal(await page.locator('#micro-current-text').textContent(), '肌纖維受到刺激，產生電脈衝。');
+      assert.equal(await page.locator('#micro-muscle-signal').getAttribute('opacity'), '1');
+      assert.equal(await page.locator('#micro-contraction').isVisible(), false);
+      assert.match(await page.locator('#micro-muscle').getAttribute('transform'), /scale\(1 1\)/);
+      await page.locator('#micro-next').click();
+      assert.equal(await page.locator('#micro-step-count').textContent(), '步驟 6 / 6');
+      assert.equal(await page.locator('#micro-current-text').textContent(), '電脈衝沿肌纖維傳遞，引致肌肉收縮。');
       assert.equal(await page.locator('#micro-output-signal').getAttribute('opacity'), '0');
       assert.equal(await page.locator('#micro-contraction').isVisible(), true);
       assert.equal(await page.locator('#micro-receiver').isVisible(), false);
@@ -203,6 +209,38 @@ async function check(name, fn) { await fn(); checks++; console.log('PASS', name)
       if (mode === 'knee') await page.locator('#synapse-dialog').screenshot({ path: path.join(out, 'synapse-muscle.png') });
       await page.locator('#close-synapse').click();
     }
+  });
+  await check('every microscopic label reaches its visible structure through animation and resizing', async () => {
+    await setScenario('withdrawal');
+    for (const width of [1440, 768, 375]) {
+      await page.setViewportSize({ width, height: 1000 });
+      for (const site of ['sensory-inter', 'motor-muscle']) {
+        await page.locator('[data-open-synapse=' + site + ']').click();
+        const last = site === 'motor-muscle' ? 5 : 4;
+        // Check both the stored molecules and every subsequent animated stage.
+        for (const step of [-1, 0, 1, 2, 3, 4, ...(last === 5 ? [5] : [])]) {
+          if (step >= 0) await page.locator('[data-micro-step="' + step + '"]').click();
+          const annotations = await page.locator('#micro-diagram').evaluate(diagram => {
+            const hits = [...diagram.querySelectorAll('.micro-labels path[data-target]')].map(leader => {
+              const target = document.getElementById(leader.dataset.target), tip = leader.getPointAtLength(leader.getTotalLength());
+              const local = new DOMPoint(tip.x, tip.y).matrixTransform(target.getCTM().inverse().multiply(leader.getCTM()));
+              return { label: leader.id, hits: target.isPointInFill(local) || target.isPointInStroke(local), visible: target.getBoundingClientRect().width > 0 && getComputedStyle(target).opacity !== '0' };
+            });
+            const bracket = diagram.querySelector('#micro-cleft-bracket');
+            const ends = [bracket.getPointAtLength(0), bracket.getPointAtLength(bracket.getTotalLength())];
+            const surfaces = [diagram.querySelector('#micro-presynaptic'), diagram.querySelector('#micro-muscle').hasAttribute('hidden') ? diagram.querySelector('#micro-receiver') : diagram.querySelector('#micro-muscle path')];
+            ends.forEach((point, i) => {
+              const local = new DOMPoint(point.x, point.y).matrixTransform(surfaces[i].getCTM().inverse().multiply(bracket.getCTM()));
+              hits.push({ label: 'cleft-surface-' + i, hits: surfaces[i].isPointInStroke(local), visible: true });
+            });
+            return hits;
+          });
+          assert.deepEqual(annotations.filter(a => !a.hits || !a.visible), [], `${width}/${site}/${step}: label missed its target`);
+        }
+        await page.locator('#close-synapse').click();
+      }
+    }
+    await page.setViewportSize({ width: 1440, height: 1000 });
   });
   await check('microscope pauses the main clock and preserves its progress, prediction and records', async () => {
     await setScenario('withdrawal'); await page.locator('[name=prediction-reflex][value=yes]').check();
@@ -288,7 +326,9 @@ async function check(name, fn) { await fn(); checks++; console.log('PASS', name)
     await offlinePage.locator('#hotspot-sensory-motor').click(); assert.match(await offlinePage.locator('#synapse-subtitle').textContent(), /感覺神經元 → 運動神經元/);
     await offlinePage.locator('[data-micro-step="4"]').click(); assert.equal(await offlinePage.locator('#micro-output-signal').getAttribute('opacity'), '1');
     await offlinePage.locator('#close-synapse').click(); await offlinePage.locator('[data-open-synapse=motor-muscle]').click();
-    await offlinePage.locator('[data-micro-step="4"]').click(); assert.equal(await offlinePage.locator('#micro-contraction').isVisible(), true);
+    await offlinePage.locator('[data-micro-step="4"]').click();
+    assert.equal(await offlinePage.locator('#micro-muscle-signal').getAttribute('opacity'), '1'); assert.equal(await offlinePage.locator('#micro-contraction').isVisible(), false);
+    await offlinePage.locator('#micro-next').click(); assert.equal(await offlinePage.locator('#micro-contraction').isVisible(), true);
     assert.deepEqual(fetched, []); await offline.close();
   });
   await check('no browser exceptions or external runtime dependencies', async () => { assert.deepEqual(errors, []); assert.equal(requests.filter(url => !url.startsWith('http://127.0.0.1:4174')).length, 0); });

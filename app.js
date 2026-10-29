@@ -294,7 +294,7 @@
       const plan = state.run || buildRun(config());
       const arrival = plan.segments.find(segment => segment.path === site.arrival);
       if (!arrival || arrival.blocked) return '在本次受損條件下，訊號未能到達這個接點。這裏可獨立播放正常傳遞機制。';
-      if (state.run && state.time >= arrival.end) return '主圖的訊號已到達這個接點。這裏把正常傳遞過程分成五步放大觀察。';
+      if (state.run && state.time >= arrival.end) return '主圖的訊號已到達這個接點。這裏把正常傳遞過程分步放大觀察。';
       return '這裏展示所選接點的正常傳遞機制；不代表主圖的訊號已到達這個位置。';
     },
   });
